@@ -1,20 +1,19 @@
-<%- include('./partials/header') %>
-<title>Awesome Notepad</title>
+<%- include('./partials/header') %> 
+    <title>Awesome Notepad</title>
 </head>
-
 <body>
     <h1><%= title %> </h1>
     <form action="/" method="GET">
         <button type="submit" class="myButton"> Cancel </button>
     </form>
     <div class="card">
-        <form action="edit-note" method="POST" class="form-control">
+        <form action="new-note" method="POST" class="form-control">
             <label>Title</label>
             <input type="text" name="title" autocomplete="off">
             <label>Content</label>
             <textarea name="content" rows="5"> </textarea>
-            <button type="submit" class="myButton"> Save </button>
+                <button type="submit" class="myButton"> Save </button>
         </form>
     </div>
 </body>
-<%- include('./partials/footer') %>
+<%- include('./partials/footer') %> 

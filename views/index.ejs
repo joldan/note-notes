@@ -1,11 +1,19 @@
-<%- include('./partials/header') %> 
-    <title>Awesome Notepad</title>
+<%- include('./partials/header') %>
+<title>Awesome Notepad</title>
 </head>
+
 <body>
     <h1>Welcome to your new app for things like this</h1>
     <form action="/new-note" method="GET">
-        <button type="submit" class="btn">New Note</button>
+        <button type="submit" class="myButton">New Note</button>
     </form>
+    <div class="card-wrapper">
+        <% for (note of notes) { %>
+            <div class="card-note">
+                <h2> <%= note.title %> </h2>
+                <p> <%= note.content %> </p>
+            </div>
+        <% } %>
+    </div>
 </body>
-<%- include('./partials/footer') %> 
-
+<%- include('./partials/footer') %>

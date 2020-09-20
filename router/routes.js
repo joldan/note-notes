@@ -10,6 +10,8 @@ router.get('/', mainController.getIndex);
 router.get('/edit-note', mainController.getEditNote);
 
 router.get('/new-note', mainController.getNewNote);
+router.post('/new-note', mainController.postNewNote);
+
 
 
 module.exports = router;
