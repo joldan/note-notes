@@ -2,22 +2,27 @@ body {
     background-color: rgb(255, 254, 220);
 }
 
-.card,
+.card-edit,
 .card-note{
 	margin: 1rem 2rem 0 1rem ;
 	padding: 0.5rem 0.5rem 0.5rem 0.5rem ;
-	background-color: rgb(255, 253, 185);;
+	background-color: rgb(255, 253, 185);
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
-    width : 500px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 16px;
+	font-size: 16px;
+	transition: all .2s ease-in-out
+}
+
+.card-edit{
+	height: 15rem;
+	width: 25rem;
+	float: left;
 }
 
 .card-note{
 	height: 15rem;
 	width: 25rem;
 	float: left;
-	transition: all .2s ease-in-out
 }
 
 .card-note:hover{
@@ -27,8 +32,11 @@ body {
 
 
 .myButton,
-.myEditButton
+.myEditButton,
+.navButton,
+.myRemoveButton
  {
+	width: 8rem;
 	box-shadow: 0px 1px 0px 0px #fff6af;
 	background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
 	background-color:#ffec64;
@@ -44,18 +52,22 @@ body {
 	text-decoration:none;
 	text-shadow:0px 1px 0px #ffee66;
 }
-.myButton:hover, .myEditButton:hover {
+
+.myButton,
+.myEditButton{
+  float: right;
+}
+.myRemoveButton{
+	float: left;
+}
+
+.myButton:hover, .myEditButton:hover, .myRemoveButton:hover{
 	background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
 	background-color:#ffab23;
 }
 .myButton:active, .myEditButton:active {
 	position:relative;
 	top:1px;
-}
-
-.myEditButton{
-	float: right;
-	margin: 0 0.05rem 0;
 }
 
 .content-box{

@@ -13,10 +13,16 @@ exports.getIndex = (req, res, next) => {
 };
 
 exports.getEditNote = (req, res, next) => {
-    res.render('edit-note', {
-        path : '/edit-note',
-        title: 'Edit Note',
-    });
+    const noteId = req.params.noteId;
+    Note.findByPk( noteId)
+    .then( note => {
+        res.render('edit-note', {
+            path : '/edit-note',
+            title: 'Edit Note',
+            note: note
+        });
+    })
+    .catch(err => console.log(err));
 }
 
 exports.getNewNote = (req, res, next) => {
@@ -37,4 +43,19 @@ exports.postNewNote = (req, res, next) => {
         res.redirect('/')
     })
     .catch(err => console.log(err));
+}
+
+exports.postEditNote = (req, res, next) => {
+    const noteId = req.body.noteId;
+    const updatedTitle = req.body.title;
+    const updatedContent = req.body.content;
+
+    Note.findByPk(noteId)
+    .then(note => {
+        note.title = updatedTitle;
+        note.content = updatedContent;
+        return note.save()
+    })
+    .then(res.redirect('/'))
+    .catch( err => console.log(err))
 }

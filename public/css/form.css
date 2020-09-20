@@ -1,6 +1,5 @@
 .form-control {
     padding: 1rem 1rem 1rem 1rem;
-    background-color: rgb(255, 253, 185);
 }
 
 .form-control label,
@@ -16,11 +15,23 @@
 .form-control textarea {
     border: 1px solid #a1a1a1;
     font: inherit;
-    border-radius: 2px;
+    border-radius: 2px;  
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid black;
+    transition: all .2s ease-in-out
 }
 
 .form-control textarea {
     height: 10rem;
+	background-color: rgb(248, 245, 166);
+    border:none;
+}
+
+.form-control input:hover,
+.form-control textarea:hover {
+    transform: scale(1.02);
 }
 
 .form-control input:focus,

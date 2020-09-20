@@ -5,15 +5,18 @@
 <body>
     <h1>Welcome to your new app for things like this</h1>
     <form action="/new-note" method="GET">
-        <button type="submit" class="myButton">New Note</button>
+        <button type="submit" class="navButton">New Note</button>
     </form>
     <div class="card-wrapper">
         <% for (note of notes) { %>
             <div class="card-note">
                 <h2> <%= note.title %> </h2>
                 <div class="content-box"> <%= note.content %> </div>
-                <form action="/edit-note <%=  %> " method="POST">
+                <form action="/edit-note/<%= note.id %>" method="GET">
                     <button type="submit" class="myEditButton"> Edit </button>
+                </form>
+                <form action="/remove-note/<%= note.id %>" method="GET">
+                    <button type="submit" class="myRemoveButton"> Remove </button>
                 </form>
             </div>
         <% } %>
