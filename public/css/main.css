@@ -26,7 +26,9 @@ body {
 
 
 
-.myButton {
+.myButton,
+.myEditButton
+ {
 	box-shadow: 0px 1px 0px 0px #fff6af;
 	background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
 	background-color:#ffec64;
@@ -42,13 +44,24 @@ body {
 	text-decoration:none;
 	text-shadow:0px 1px 0px #ffee66;
 }
-.myButton:hover {
+.myButton:hover, .myEditButton:hover {
 	background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
 	background-color:#ffab23;
 }
-.myButton:active {
+.myButton:active, .myEditButton:active {
 	position:relative;
 	top:1px;
 }
 
-        
+.myEditButton{
+	float: right;
+	margin: 0 0.05rem 0;
+}
+
+.content-box{
+	margin-bottom: 1rem;
+	border: none;
+	width: inherit;
+	height: 8rem;
+	overflow: scroll;
+}
