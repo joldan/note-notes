@@ -7,14 +7,15 @@ exports.getIndex = (req, res, next) => {
 exports.getEditNote = (req, res, next) => {
     res.render('edit-note', {
         path : '/edit-note',
-        title: 'Edit Note'
+        title: 'Edit Note',
+        state : 'edit'
     });
 }
 
 exports.getNewNote = (req, res, next) => {
-    console.log('caca')
     res.render('edit-note', {
         path : 'new-note',
-        title: 'New Note'
+        title: 'New Note',
+        state: 'new'
     });
 }

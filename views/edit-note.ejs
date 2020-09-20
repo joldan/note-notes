@@ -1,15 +1,21 @@
-<% include('./partials/header') %> 
+<%- include('./partials/header') %> 
     <title>Awesome Notepad</title>
 </head>
 <body>
     <h1><%= title %> </h1>
-
-    <form action="new-note" method="POST" class="add-note__form">
-        <label>Title</label>
-        <input type="text" name="title">
-        <label>Note</label>
-        <textarea> </textarea>
-    </form>
+    <div class="card">
+        <form action="new-note" method="POST" class="form-control">
+            <label>Title</label>
+            <input type="text" name="title">
+            <label>Note</label>
+            <textarea> </textarea>
+            <% if( state === 'edit') { %> 
+                <button type="submit" class="myButton"> Save </button>
+            <% } else if( state === 'new' ) { %>
+                <button type="submit" class="myButton"> Save </button>
+            <% } %>
+        </form>
+    </div>
 </body>
-<% include('./partials/footer') %> 
+<%- include('./partials/footer') %> 
 
