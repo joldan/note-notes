@@ -15,8 +15,9 @@
                 <form action="/edit-note/<%= note.id %>" method="GET">
                     <button type="submit" class="myEditButton"> Edit </button>
                 </form>
-                <form action="/remove-note/<%= note.id %>" method="GET">
-                    <button type="submit" class="myRemoveButton"> Remove </button>
+                <form action="/delete-note" method="POST">
+                    <button type="submit" class="myRemoveButton"> Destroy </button>
+                    <input type="hidden" name="noteId" value=<%= note.id %> >
                 </form>
             </div>
         <% } %>

@@ -61,11 +61,11 @@ body {
 	float: left;
 }
 
-.myButton:hover, .myEditButton:hover, .myRemoveButton:hover{
+.navButton:hover, .myEditButton:hover, .myRemoveButton:hover{
 	background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
 	background-color:#ffab23;
 }
-.myButton:active, .myEditButton:active {
+.navButton:active, .myEditButton:active {
 	position:relative;
 	top:1px;
 }
